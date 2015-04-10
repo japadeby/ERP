@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+    <title>Enterprise Reporting Portal</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/dropzone.css">
+</head>
+<body ng-app="ERS">
+<div class="application" ng-controller="Reports">
+    <section class="application--main">
+        <div style="cursor: pointer" reset-filter-banner class="main--header">
+            <a class="button--header" id="faq-video-trigger" href="#faq-video" data-toggle="modal">Learn More</a>
+            <a class="button--header" id="gallery" href="#" data-toggle="modal">Gallery</a>
+            <a class="button--header" id="community" href="#" data-toggle="modal">Community</a>
+        </div>
+        <div class="main--title" id="js-report-type-title">
+            <span >Find a Report</span>
+            <!--Search functionality placed in the back pocket-->
+            <!--<form class="form-inline search-bar" role="form">-->
+                <!--<div class="form-group has-feedback">-->
+                    <!--&lt;!&ndash;<label class="control-label">Find a Report</label>&ndash;&gt;-->
+                    <!--<input class="form-control" type="text" ng-model="search.title" placeholder="Type to find a report"/>-->
+                    <!--<span class="glyphicon glyphicon-search form-control-feedback"></span>-->
+                <!--</div>-->
+            <!--</form>-->
+        </div>
+        <div class="main--filter clearfix">
+            <div class="main--filter--reports report--types js-report-type js-tooltip" title="Click here to view reports currently in Portal with pre-selected parameters and formatting.">
+                Currently Viewing<span class="selected-type">Standard Reports</span>
+                <ul class="type-options js-type-options">
+                    <li class="option js-type-options-item" ng-click="type ='standard'">Standard Reports</li>
+                    <li class="option js-type-options-item" ng-click="type ='custom'">Custom Reports</li>
+                </ul>
+            </div>
+            <div ng-show="totalItems > 0" class="main--filter--number js-display-number">
+                <!--<span class="selected-number" ng-bind="numPerPage === filtered.length ? 'All' : numPerPage"></span>Reports being displayed-->
+                <span class="selected-number" ng-bind="all !== false ? getNumPerPage() : 'all'"></span>Reports being displayed
+                <ul  class="number-options js-number-options">
+                    <li class="option" ng-click="reportsDisplayed(12)">12</li>
+                    <li class="option" ng-click="reportsDisplayed(24)">24</li>
+                    <li class="option" ng-click="reportsDisplayed(48)">48</li>
+                    <li class="option" ng-click="reportsDisplayed('all')">All</li>
+                </ul>
+            </div>
+            <ul class="main--filter--display">
+                <li class="display active js-display js-tooltip" data-toggle="tooltip" title="Click here to view reports as tiles." id="display-grid"></li>
+                <li class="display js-display js-tooltip" data-toggle="tooltip" title="Click here to view a list of reports." id="display-list"></li>
+            </ul>
+            <pagination ng-show="totalItems > 0" class="report--list--pagination" ng-model="currentPage" max-size="numPages" total-items="totalItems" items-per-page="numPerPage" previous-text="❮" next-text="❯"></pagination>
+        </div>
+        <div class="main--reports clearfix js-reports display-grid">
+            <ul  class="report--categories">
+                <a><li filter-button data-toggle="tooltip" title="View acquisition & assistance planning reports." class="js-tooltip report--categories--item cat-planning disabled" data-category="planning"></li></a>
+                <a><li filter-button data-toggle="tooltip" title="View financial, budget, pipeline, obligation, and FAD reports." class="js-tooltip report--categories--item cat-budget" data-category="budget"></li></a>
+                <a><li filter-button data-toggle="tooltip" title="View reports on USAID vendors and partners, including the 'Where Does USAID Money Go?' report." class="js-tooltip report--categories--item cat-vendor" data-category="vendor"></li></a>
+                <a><li filter-button data-toggle="tooltip" title="View performance reports (Note: additional reports forthcoming)." class="js-tooltip report--categories--item cat-special" data-category="performance"></li></a>
+                <a><li filter-button data-toggle="tooltip" title="View reports from Economic Analysis and Data Sources (EADS) and other sources." class="js-tooltip report--categories--item cat-other" data-category="other"></li></a>
+                <a><li filter-button data-toggle="tooltip" title="View all reports currently in Portal." class="js-tooltip report--categories--item cat-all" data-category=""></li></a>
+            </ul>
+            <div class="report--list--header">
+                <div class="date clearfix">Date</div>
+                <div class="title clearfix">Title</div>
+                <div class="description">Description</div>
+                <div class="view">View</div>
+            </div>
+            <!--<div ng-if="type === 'custom' " class="coming-soon">Coming Soon</div>-->
+            <ul class="report--list js-report-content clearfix">
+                <li ng-repeat="element in filtered | startFrom:(currentPage-1)*numPerPage | limitTo:numPerPage " class="report--item {{categories(element.category)}}">
+                    <div class="date">
+                        <div>{{element.interval}}</div>
+                        <div ng-bind="element.interval === 'Updated Daily' ? '' : element.date"></div>
+                    </div>
+                    <div class="title" ng-bind="element.title">
+                    </div>
+                    <div data-ng-bind="element.description" data-ellipsis class="description">
+                        <!--<p class="js-dotdotdot">{{element.description}}</p>-->
+                        <!--<div tooltip="{{element.description}}"></div>-->
+                    </div>
+                    <ul class="view">
+                        <!-- Report -->
+                        <!-- Add class that handles if the report is a PDF or XSLX -->
+                        <!-- <li ng-class="{pdf: element.report.type === 'PDF', xls: element.report.type === 'XLS'}" class="view--button" ng-if="element.hasOwnProperty('report')"> -->
+                        <li ng-class="element.report.type === 'PDF' ? 'pdf' : 'xls'" class="view--button" ng-if="element.hasOwnProperty('report')">
+                            <a ng-href="{{element.report.url}}"></a>
+                        </li>
+
+                        <!-- Dashboard -->
+                        <li class="view--button" ng-if="element.hasOwnProperty('dashboard')">
+                            <!-- <a ng-attr-target="{{element.dashboard.type === 'PDF' ? '_blank' : undefined}}" ng-href="{{element.report.url}}"></a> -->
+                            <!-- <a data-toggle="modal" ng-href="{{'#' + element.id}}" ng-attr-data-target="{{'#' + element.id}}"></a> -->
+                            <a data-toggle="modal" ng-href="{{'#'+element.id}}"></a>
+                        </li>
+                    </ul>
+
+                    <!-- Hack to update elements for jquery dotdot -->
+                    <!--<div style="display: none;">{{last($last)}}</div>-->
+                    <modal-dashboard id="{{element.id}}" title="{{element.title}}" url="{{element.dashboard.url}}" image="{{element.dashboard.image}}"/>
+                </li>
+            </ul>
+            <pagination ng-show="totalItems > 0" class="report--list--pagination" ng-model="currentPage" max-size="numPages" total-items="totalItems" items-per-page="numPerPage" previous-text="<" next-text=">"></pagination>
+        </div>
+    </section>
+    <div class="main--filter clearfix">
+        <div class="main--filter--type">
+            <span class="js-tooltip" data-toggle="tooltip" title="Click here to request creation of a new report."><a id="new-report-trigger" href="#existing-report-no" data-toggle="modal" class="button button--filter-type">Request a Report</a></span>
+            <span class="js-tooltip" data-toggle="tooltip" title="Click here to submit a report or other data for validation."><a id="validate-report-trigger" href="#modal-validate-report" data-toggle="modal" class="button button--filter-type" >Validate a Report</a></span>
+            <span class="js-tooltip" data-toggle="tooltip" title="Click here to see the full queue of reporting requests currently open (updated approx. daily)."><a id="under-review-trigger" href="#modal-under-review" data-toggle="modal" class="button button--filter-type">Under Review</a></span>
+        </div>
+    </div>
+    <footer class="application--footer">
+        Release
+    </footer>
+</div>
+
+<div class="modal fade" id="faq-video" tabindex="-1" data-replace="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h3 class="modal-title">Enterprise Reporting Portal Tutorial</h3>
+            </div>
+            <div class="modal-body">
+                <video id="faq-video-element" controls width="935" height="447">
+                    <source src="assets/videos/Portal1080p.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modals-->
+<div ng-include="'modals/modalNewReport.html'"></div>
+<div ng-include="'modals/existingReportModal-no.html'"></div>
+<div ng-include="'modals/reportStandardModal.html'"></div>
+<div ng-include="'modals/reportStandardModal2.html'"></div>
+<div ng-include="'modals/reportStandardModal3.html'"></div>
+<div ng-include="'modals/oneTimeAdHocModal.html'"></div>
+<div ng-include="'modals/reportOngoingModal.html'"></div>
+<div ng-include="'modals/reportDetailed.html'"></div>
+<div ng-include="'modals/reportNoCategory.html'"></div>
+<div ng-include="'modals/ersTeamModal.html'"></div>
+<div ng-include="'modals/endReportModal.html'"></div>
+<div ng-include="'modals/validateReportModal.html'"></div>
+<div ng-include="'modals/validateReportModal2.html'"></div>
+<!--<div ng-include="'modals/videoFaqModal.html'"></div>-->
+<div ng-include="'modals/underReviewModal.html'"></div>
+<div ng-include="'modals/endValidateReportModal.html'"></div>
+
+
+
+<!--JS libraries-->
+<script src="scripts/libs/angular.min.js"></script>
+<script src="scripts/libs/jquery.min.js"></script>
+<script src="scripts/libs/bootstrap.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js" type="text/javascript"></script> -->
+<!--<script src="scripts/ui-bootstrap-tpls-0.3.0.js"></script>-->
+<!--<script src="scripts/libs/ui-bootstrap-tpls-0.10.0.js"></script>-->
+<script src="scripts/libs/angular-cookies.min.js"></script>
+<script src="scripts/libs/ui-bootstrap-tpls.min.js"></script>
+<script src="scripts/libs/jquery.dotdotdot.min.js"></script>
+<script src="scripts/libs/angular-ellipsis.min.js"></script>
+<script src="scripts/libs/dropzone.js"></script>
+
+<!--Main JS file-->
+<script src="scripts/main.js"></script>
+<script src="scripts/main-jquery.js"></script>
+
+<!--Controllers-->
+<script src="scripts/controllers/reportsController.js"></script>
+
+<!--Filters-->
+<script src="scripts/filters/startFromFilter.js"></script>
+<script src="scripts/filters/reportFiltering.js"></script>
+
+<!--Directives-->
+<script src="scripts/directives/filterButtonDirective.js"></script>
+<script src="scripts/directives/modalDashboardDirective.js"></script>
+<script src="scripts/directives/ellipsisDirective.js"></script>
+<script src="scripts/directives/resetFilterBannerDirective.js"></script>
+<script src="scripts/directives/disableDirective.js"></script>
+
+<!--Services-->
+<script src="scripts/services/services.js"></script>
+
+<!--Only used for dev-->
+<script src="http://localhost:35729/livereload.js"></script>
+</body>

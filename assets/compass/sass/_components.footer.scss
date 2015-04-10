@@ -1,0 +1,30 @@
+.application--footer {
+  font-size: 12px;
+  line-height: 49px;
+
+  bottom: 0;
+  // position: absolute;
+
+  width: 960px;
+  height: 49px;
+  padding: 0 20px;
+
+  text-align: right;
+
+  color: #fff;
+  background: $color-footer;
+}
+.application--footer span {
+  float: right;
+
+  padding: 0 20px;
+
+  background: #1e252b;
+}
+
+
+.report--list--pagination {
+  float: right;
+
+  margin-top: 0;
+}

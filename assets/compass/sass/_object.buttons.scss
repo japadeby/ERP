@@ -1,0 +1,208 @@
+.button--filter-type,
+.button--filter-type:focus {
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: lighter;
+
+    position: relative;
+
+    outline: 0;
+    text-decoration: none;
+
+    display: inline-block;
+
+    width: 291px;
+    height: 56px;
+    margin: 0 8px;
+    padding: 12px 0 0 60px;
+    text-align: left;
+
+    color: #fff;
+    border: 1px solid $color-active;
+
+    background-color: $color-blue;
+
+    -webkit-transition: .2s all ease-in;
+    -o-transition: .2s all ease-in;
+    transition: .2s all ease-in;
+
+    &:hover {
+        background-color: $color-dark-blue !important;
+    }
+
+    &#new-report-trigger {
+        margin-left:0px;
+
+        &::after{
+            background-position: 0 0;
+        }
+
+
+    }
+
+    &#validate-report-trigger {
+        background-position: 0 0;
+
+        &::after{
+            background-position: -24px 0;
+        }
+    }
+
+    &#under-review-trigger {
+        margin-right:0px;
+
+        &::after{
+            background-position: -48px 0;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &.active {
+        background: $color-active;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &::before {
+            content: '';
+
+            width:48px;
+            height: 56px;
+
+            position: absolute;
+            left: -1px;
+            top: -1px;
+
+            background-color: $color-dark-blue;
+        }
+
+    &::after {
+        content: '';
+        width: 24px;
+        height: 24px;
+
+        position: absolute;
+        left: 12px;
+        top: 15px;
+
+        background-image:url('../images/img-sprite-72x24.png');
+
+    }
+}
+
+.button--header,
+.button--header:active,
+.button--header:visited,
+.button--header:focus {
+    font-size: 12px;
+    line-height: 35px;
+    display: inline-block;
+    width: 87px;
+    height: 35px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    position: absolute;
+    top: 20px;
+    margin-right: 20px;
+    right: 0px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.4);
+
+    &:hover {
+        color: $color-active;
+        background: #fff;
+        text-decoration: none;
+    }
+}
+
+//Individual header button styles
+#gallery{
+    margin-right: 120px;
+}
+
+
+#community{
+    margin-right: 220px;
+}
+
+
+.view {
+    list-style: none;
+    padding: 0;
+}
+.view--button {
+    float: left;
+    margin-right: 8px;
+
+    width: 39px;
+    height: 39px;
+
+    cursor: pointer;
+
+    background: $color-icon-background;
+
+    -webkit-transition: background .1s;
+    -o-transition: background .1s;
+    transition: background .1s;
+
+    &:hover,
+    &:active,
+    &.active {
+        background: $color-active;
+
+        &::before {
+            background-position: 0 -17px;
+        }
+    }
+
+    position: relative;
+    &::before {
+        pointer-events: none;
+
+        position: absolute;
+        top: 11px;
+        left: 10px;
+
+        width: 20px;
+        height: 17px;
+
+        content: '';
+
+        background: url(../images/dash-rep-sprite-20x17.png) no-repeat;
+
+        -webkit-transition: background-position .1s;
+        -o-transition: background-position .1s;
+        transition: background-position .1s;
+    }
+
+    &:nth-child(2)::before,
+    &.view--button-dashboard::before {
+        background-position: -20px 0;
+    }
+    &:nth-child(2):hover::before,
+    &:nth-child(2):active::before,
+    &:nth-child(2).active::before,
+    &.view--button-dashboard:hover::before,
+    &.view--button-dashboard:active::before,
+    &.view--button-dashboard.active::before {
+        background-position: -20px -17px;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.btn-default {
+  color: #fff !important;
+  background-color: $color-gray-dark !important;
+}
+
+.modal-footer button:nth-child(1) {
+  float: left;
+}

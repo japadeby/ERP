@@ -1,0 +1,137 @@
+.report--categories {
+    display: block;
+
+    margin: 6px auto 35px;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+    & > a {
+        margin: 0 10px;
+        color: #333;
+
+        &:first-child {margin-left:0;}
+        &:last-child {margin-right:0;}
+    }
+}
+
+.report--categories--item {
+    font-size: 12px;
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 132px;
+    padding: 7px;
+
+    -webkit-transition:  .2s all ease-in;
+    -o-transition:  .2s all ease-in;
+    transition:  .2s all ease-in;
+
+    color: #fff;
+
+    letter-spacing: 1px;
+
+    &.cat-planning {
+        background-color: $color-category-1;
+        &::after { content: 'Planning'; }
+    }
+    &.cat-budget {
+        background-color: $color-category-2;
+        &::after { content: 'Budget/Finance'; }
+    }
+    &.cat-vendor {
+        background-color: $color-category-3;
+        &::after { content: 'Vendor/Partner'; }
+    }
+    &.cat-special {
+        background-color: $color-category-4;
+        &::after { content: 'Performance'; }
+    }
+    &.cat-eads {
+        background-color: $color-category-5;
+        &::after { content: 'Development Analysis'; }
+    }
+    &.cat-other {
+        background-color: $color-category-6;
+        &::after { content: 'Other'; }
+    }
+    &.cat-all {
+        background-color: #fff;
+        border: 1px solid #222;
+        color: #222;
+        // padding-top: -1px !important;
+        // padding-bottom: -1px !important;
+        &::after { content: 'View All'; }
+        &:active { background-color: #fff !important; }
+        &:hover{
+        background-color:#ddd;
+        }
+    }
+    &.cat-planning:hover,
+    &.cat-planning.active {
+        color: #fff;
+        background-color: $color-category-1h;
+    }
+    &.cat-budget:hover,
+    &.cat-budget.active {
+        color: #fff;
+        background-color: $color-category-2h;
+    }
+    &.cat-vendor:hover,
+    &.cat-vendor.active {
+        color: #fff;
+        background-color: $color-category-3h;
+    }
+    &.cat-special:hover,
+    &.cat-special.active {
+        color: #fff;
+        background-color: $color-category-4h;
+    }
+    &.cat-eads:hover,
+    &.cat-eads.active {
+        color: #fff;
+        background-color: $color-category-5h;
+    }
+    &.cat-other:hover,
+    &.cat-other.active {
+        color:#fff;
+        background-color:$color-category-6h;
+    }
+
+    &::before {
+        position:absolute;
+        right: 0;
+        bottom: -5px;
+        left: 0;
+
+        content: '';
+
+        -webkit-transition:  .5s border ease-in;
+        -o-transition:  .5s border ease-in;
+        transition:  .5s border ease-in;
+
+        border-bottom: 4px solid transparent;
+    }
+    &.cat-planning.active::before { border-color: $color-category-1h; }
+    &.cat-budget.active::before { border-color: $color-category-2h; }
+    &.cat-vendor.active::before { border-color: $color-category-3h; }
+    &.cat-special.active::before { border-color: $color-category-4h; }
+    &.cat-eads.active::before { border-color: $color-category-5h; }
+    &.cat-other.active::before { border-color: $color-category-6h; }
+    &.active:hover {
+        &::after {
+
+            content: 'clear filter';
+        }
+    }
+    &:first-of-type { margin-left: 0; }
+    &:last-of-type  { margin-right: 0; }
+}
+
+.report--categories--item{
+  text-decoration: none;
+  cursor: pointer;
+}

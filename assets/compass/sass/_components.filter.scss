@@ -1,0 +1,267 @@
+.main--filter {
+    position: relative;
+
+    width: 917px;
+    margin: 20px auto;
+    // padding-bottom: 60px;
+
+    z-index: 1;
+}
+
+.main--filter--type {
+    margin: 0;
+
+    text-align: center;
+}
+.main--filter--reports {
+    float: left;
+    margin-right: 20px;
+    line-height: 24px;
+    font-weight: lighter;
+
+    padding-left: 12px;
+
+    float: left;
+
+    height: 26px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    color: $color-pagination-border;
+    border: 1px solid $color-pagination-border;
+    background: #fff;
+    .selected-type {
+        font-weight: bold;
+        font-style: normal;
+
+        display: inline-block;
+
+        width: 150px;
+        margin-left: 8px;
+        padding-right: 6px;
+
+        text-align: center;
+
+        color: $color-active;
+        background: $color-pagination-background;
+
+        position: relative;
+
+        border-left: 1px solid $color-pagination-border;
+
+        &::before {
+            pointer-events: none;
+
+            position: absolute;
+            top: 4px;
+            right: 0;
+
+            width: 16px;
+            height: 16px;
+
+            content: '';
+
+            background: url(../images/image-sprite-16x16.png) no-repeat -147px 0;
+        }
+    }
+
+    .type-options {
+        display: none;
+        list-style: none;
+        padding: 0;
+        list-style: none;
+        padding: 0;
+        width: 151px;
+        text-align: center;
+        border: 1px solid $color-pagination-border;
+        margin-right: -1px;
+        background: #fff;
+        color: $color-filter-text;
+
+        position: absolute;
+        right: 0;
+
+        .option {
+            height: 26px;
+            font-size: 14px;
+            line-height: 26px;
+
+            &:hover {
+                background: $color-background;
+            }
+        }
+    }
+}
+.main--filter--keyword {
+    position: relative;
+
+    float: left;
+
+    .keyword-input {
+        width: 293px ;
+        height: 26px;
+        margin-right: 20px;
+        padding-left: 30px;
+
+        color: $color-pagination-border;
+        border: 1px solid $color-pagination-border;
+        background: #fff;
+
+        font-style: oblique;
+        line-height: 24px;
+        font-weight: lighter;
+    }
+
+    &::before {
+        position: absolute;
+        top: 4px;
+        left: 9px;
+
+        width: 16px;
+        height: 16px;
+
+        content: '';
+
+        background: url(../images/image-sprite-16x16.png) no-repeat;
+    }
+}
+.main--filter--number {
+    // font-style: oblique;
+    line-height: 24px;
+    font-weight: lighter;
+
+    float: left;
+
+    width: 177px + 45px;
+    height: 26px;
+    margin-right: 20px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    color: $color-pagination-border;
+    border: 1px solid $color-pagination-border;
+    background: #fff;
+    .selected-number {
+        font-weight: bold;
+        font-style: normal;
+
+        display: inline-block;
+
+        width: 45px;
+        margin-right: 8px;
+        padding-right: 6px;
+
+        text-align: center;
+
+        color: $color-active;
+        background: $color-pagination-background;
+
+        position: relative;
+
+        border-right: 1px solid $color-pagination-border;
+
+        &::before {
+            pointer-events: none;
+
+            position: absolute;
+            top: 4px;
+            right: 0;
+
+            width: 16px;
+            height: 16px;
+
+            content: '';
+
+            background: url(../images/image-sprite-16x16.png) no-repeat -147px 0;
+        }
+    }
+
+    .number-options {
+        display: none;
+        list-style: none;
+        padding: 0;
+        list-style: none;
+        padding: 0;
+        width: 46px;
+        text-align: center;
+        border: 1px solid $color-pagination-border;
+        margin-left: -1px;
+        background: #fff;
+        color: $color-filter-text;
+
+        position: absolute;
+
+        .option {
+            height: 26px;
+            font-size: 14px;
+            line-height: 26px;
+
+            &:hover {
+                background: $color-background;
+            }
+        }
+    }
+}
+.main--filter--display {
+    float: left;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    .display {
+        float: left;
+
+        width: 66px;
+        height: 26px;
+
+        cursor: pointer;
+
+        border: 1px solid $color-border;
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 3px;
+            left: 26px;
+
+            width: 16px;
+            height: 16px;
+
+            content: '';
+
+            background: url(../images/image-sprite-16x16.png) no-repeat -64px 0;
+        }
+        &.active,
+        &:hover {
+            background: $color-pagination-background;
+
+            &::before {
+                background-position: -48px 0;
+            }
+        }
+        &:nth-child(1) {
+            border-right-width: 0;
+            &::before {
+                background-position: -32px 0;
+            }
+
+            &.active::before,
+            &:hover::before {
+                background-position: -16px 0;
+            }
+        }
+    }
+}
+
+.main--filter--page {
+    float: right;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}

@@ -1,0 +1,57 @@
+// .report--types {
+//     display: inline-block;
+
+//     margin: 0;
+//     padding: 0;
+
+//     list-style: none;
+//     .selected-type {
+//         position: relative;
+
+//         font-size: 21px;
+//         font-weight: 100;
+
+//         cursor: pointer;
+//         &::after {
+//             position: absolute;
+//             top: 4px;
+//             right: -20px;
+
+//             width: 16px;
+//             height: 16px;
+
+//             content: '';
+//             pointer-events: none;
+
+//             background: url(../images/image-sprite-16x16.png) no-repeat -147px 0;
+//         }
+//     }
+//     .type-options {
+//         display: none;
+//         font-size: 18px;
+//         line-height: 26px;
+
+//         font-weight: 100;
+
+//         position: absolute;
+//         z-index: 1;
+
+//         margin: 0;
+//         margin-left: -1px;
+//         padding: 0;
+
+//         list-style: none;
+
+//         color: $color-filter-text;
+//         border: 1px solid $color-pagination-border;
+//         background: #fff;
+//         .option {
+//             padding: 4px 8px;
+//             cursor: pointer;
+
+//             &:hover {
+//                 background: $color-background;
+//             }
+//         }
+//     }
+// }

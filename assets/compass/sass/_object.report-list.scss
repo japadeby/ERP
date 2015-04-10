@@ -1,0 +1,159 @@
+$height-list-item: 70px;
+
+
+.display-list {
+    width: 917px;
+    margin: 0 auto;
+
+    .report--list--header {
+        display: block;
+        text-transform: uppercase;
+        color: $color-blue;
+        padding: 0 0 6px 15px;
+
+        font-size: 12px;
+        letter-spacing: 1px;
+
+        margin-top: 26px; // hack fix for the floated categories/selector above
+
+        .date, .title, .description, .view {
+            height: auto;
+        }
+    }
+    .report--list {
+        list-style: none;
+        padding: 0;
+        border-top: 3px solid $color-blue;
+        margin-bottom: 20px;
+
+    }
+    .report--item {
+        background: $color-zebra-primary;
+        padding-left: 15px;
+        height: $height-list-item;
+        overflow: hidden;
+        position: relative;
+
+        &:nth-child(2n) {
+            background: $color-zebra-secondary;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            border-left: 6px solid $color-category-4;
+            margin: 1px 0;
+        }
+        &.cat-planning::after    { border-color: $color-category-1; }
+        &.cat-budget::after     { border-color: $color-category-2; }
+        &.cat-vendor::after { border-color: $color-category-3; }
+        &.cat-special::after      { border-color: $color-category-4; }
+        &.cat-eads::after   { border-color: $color-category-5; }
+        &.cat-other::after       { border-color: $color-category-6; }
+    }
+
+    .date, .title, .description, .view {
+        display: inline-block;
+        position: relative;
+        min-height: 1px;
+        padding: 0 15px;
+        vertical-align: middle;
+    }
+    .date {
+        width: 8.33333%;
+
+        & div {
+            &:nth-of-type(1) {
+                font-weight:600;
+            }
+            &:nth-of-type(2) {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .title {
+        width: 25%;
+    }
+    .description {
+        width: 460px;
+        height: $height-list-item;
+    }
+    .view {
+        width: 125px;
+        // float: right;
+    }
+
+    .view {
+        position: relative;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        .view--button {
+            width: 100%;
+            height: 19px;
+            margin-right: 2px;
+            border: 1px solid $color-gray-light;
+            margin-top: 3px;
+            padding-bottom: 3px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            &::before {
+                font-size: 10px;
+
+                top: 2px;
+                right: 0;
+                left: 0;
+
+                width: auto;
+
+                content: 'REPORT';
+                text-align: center;
+                letter-spacing: 1px;
+
+                background: transparent;
+            }
+            &:nth-of-type(2)::before,
+            &.view--button-dashboard::before {
+                content: 'DASHBOARD'
+            }
+            &:hover::before {
+                color: #fff;
+                content: 'XLS';
+            }
+            &:hover:nth-of-type(2)::before,
+            &.view--button-dashboard:hover::before,
+            &.eads:hover::before {
+                content: 'Dashboard/PDF' !important;
+            }
+            &.xls::before{
+                content: 'WORKSHEET';
+                font-size: 10px;
+                top: 2px;
+                right: 0;
+                left: 0;
+                width: auto;
+                text-align: center;
+                letter-spacing: 1px;
+
+                background: transparent;
+            }
+            &.xls:hover::before{
+                content: 'XLSX';
+            }
+            &.pdf{
+                content: 'Report';
+            }
+            &.pdf:hover::before{
+                content: 'PDF';
+            }
+        }
+    }
+}

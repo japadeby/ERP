@@ -1,0 +1,120 @@
+/*------------------------------------*\
+    #ENTERPRISE REPORTING PORTAL v3.0
+\*------------------------------------*/
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Colors...............Manage our color palette in isolation.
+ *
+ * TOOLS
+ * Mixins...............
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ *
+ * BASE
+ * Type.................Misc type styles
+ * Application..........
+ *
+ * OBJECTS
+ * Sprites..............Sprite dimensions and locations.
+ * Report-list..........
+ * Report-grid..........
+ *
+ * COMPONENTS
+ * Header...............Page header styles.
+ * Footer...............
+ */
+
+
+
+
+
+/**
+ * #SETTINGS
+ */
+@import "settings.colors";
+
+
+
+
+
+/**
+ * #BASE
+ */
+@import "base.application";
+
+
+
+
+
+/**
+ * #OBJECTS
+ */
+@import "object.report-list";
+@import "object.report-grid";
+@import "object.buttons";
+@import "object.pagination";
+@import "object.modal";
+@import "object.inputs";
+
+
+
+
+/**
+ * #COMPONENTS
+ */
+@import "components.header";
+@import "components.footer";
+@import "components.filter";
+@import "components.report-categories";
+@import "components.report-types";
+
+
+/*Handles coming soon watermark for custom reports*/
+.coming-soon{
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #999999;
+  text-align: center;
+  z-index: 999;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+/*James Brackin styles*/
+#watermark
+{
+  margin-top: 200px;
+  font-size: 40px;
+  color: #999999;
+  text-align: center;
+  position: absolute;
+  left: 150px;
+  z-index: 999;
+  -webkit-transform:rotate(325deg);
+  -moz-transform:rotate(325deg);
+  -o-transform:rotate(325deg);
+  -ms-transform:rotate(325deg);
+  opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+/* Make the header for the popups blue */
+.modal-header {
+color: #fff;
+background-color: #3071a9;
+border-color: #285e8e;
+}
+
+/* Brighten the Close X whiter so it can be seen easier against the new blue header */
+.close {
+line-height: 1;
+color: #DDD;
+text-shadow: 0 1px 0 #fff;
+filter: alpha(opacity=70);
+opacity: .7;
+}

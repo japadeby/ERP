@@ -1,0 +1,24 @@
+#report-info,
+#faq-video,
+#report-queue,
+.modal-dashboard {
+    .modal-dialog {
+      width: 960px;
+    }
+}
+#modal-under-review .modal-dialog {
+    width: 632px;
+}
+/* Add to bootstrap */
+.btn {
+  border-radius: 0;
+}
+.modal-content {
+  border-radius: 0;
+}
+.modal-header {
+  min-height: 47px;
+}
+.modal-body img {
+  // width: 100%;
+}

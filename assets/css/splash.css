@@ -1,0 +1,150 @@
+body {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 12px;
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+a {
+	color: #bbb;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+a:hover {
+	color: #13397f;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#header {
+	width: 100%;
+	margin: 20px 0;
+	padding-bottom: 30px;
+	background: url('../images/splash/divider.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+
+}
+
+#container {
+	width: 100%;
+	min-height: 100px;
+	background: url('../images/splash/crescent-bg.jpg') no-repeat;
+	background-position: top center;
+	margin: 30px 0;
+	text-align: center;
+}
+
+#aidtracker-logo {
+	width: 210px;
+	height: 54px;
+	background: url('../images/splash/aidtracker-logo.png') no-repeat;
+	margin: 0 auto;
+}
+
+#fluid {
+	width: 100%;
+	height: 146px;
+	max-height: 146px;
+	background: url('../images/splash/bg.jpg') repeat-x;
+}
+
+#miniwrap {
+	margin: 0 auto;
+	width: 423px;
+	height: 146px;
+}
+
+#enter {
+	width: 423px;
+	height: 146px;
+	text-align: center;
+	margin: 0 auto;
+	cursor: pointer;
+	z-index: 100;
+	position: relative;
+
+}
+
+#enter-hidden {
+	width: 423px;
+	height: 146px;
+	position: absolute;
+	background: #ccc;
+	opacity: 0;
+	background: url('../images/splash/bg-hover.png') no-repeat;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+	-o-transition: opacity .25s ease-in-out;
+	-ms-transition: opacity .25s ease-in-out;
+}
+
+#miniwrap:hover #enter-hidden {
+	opacity: 1;
+
+}
+
+h1 {
+	font-size: 36px;
+	color: #222;
+	font-family: Abel, "Helvetica Neue Lt Std", Helvetica, Arial, Sans-serif;
+	letter-spacing: 2px;
+	font-weight: 300;
+	position: relative;
+	top: 33px;
+	margin: 0 auto;
+}
+
+#enter h1 {
+	font-size: 36px;
+	color: #fff;
+	font-family: Abel, "Helvetica Neue Lt Std", Helvetica, Arial, Sans-serif;
+	letter-spacing: 10px;
+	font-weight: 100;
+	position: relative;
+	top: 33px;
+	margin: 0 0 45px;
+}
+
+#enter h2 {
+	font-size: 11px;
+	color: #ccc;
+	letter-spacing: 3px;
+	font-weight: 100;
+}
+
+#enter span {
+	letter-spacing: 3px;
+	color: #ccc;
+	font-size: 11px;
+}
+
+#enter:hover {
+}
+
+#miniwrap:hover #enter h1 {
+	color: #000;
+}
+
+#miniwrap:hover #enter span {
+	color: #999 !important;
+}
+
+#disclaimer {
+	text-align: justify;
+	line-height: 14px;
+	width: 738px;
+	margin-top: 100px;
+	color: #999;
+	line-height: 24px;
+	margin: 40px auto;
+
+}

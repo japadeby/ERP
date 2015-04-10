@@ -1,0 +1,38 @@
+<div id="modal-new-report" class="modal fade" tabindex="-1" data-replace="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h3 class="modal-title">Request a Report</h3>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <h4 class="after">Requestor's Contact Information</h4>
+                    <div class="form-group"><input type="text" id="modal_new_report1" class="form-control" placeholder="Name*" ng-model="formData.name"></div>
+                    <div class="form-group"><input type="text" id="modal_new_report2" class="form-control" placeholder="Title*" ng-model="formData.title"></div>
+                    <div class="form-group"><input type="text" id="modal_new_report3" class="form-control" placeholder="Office*" ng-model="formData.office"></div>
+                    <div class="form-group"><input type="text" id="modal_new_report4" class="form-control" placeholder="E-mail*" ng-model="formData.email"></div>
+                    <div class="form-group"><input type="text" id="modal_new_report5" class="form-control" placeholder="Phone*" ng-model="formData.phone"></div>
+                    <h6>* Required field</h6>
+
+                    <h4 class="after">Does your request concern an existing standard report?</h4>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="modalnewreport_reportType" class="js-pick-report" value="standard" onclick="javascript:document.getElementById('pickedReportQuestion').href='#existing-report-yes';"> Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="modalnewreport_reportType" class="js-pick-report" value="nonstandard" checked="checked" onclick="javascript:document.getElementById('pickedReportQuestion').href='#existing-report-no';"> No
+                        </label>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">cancel</button>
+                <!-- based on which radio is checked -->
+                <a class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="pickedReportQuestion" data-target="#existing-report-yes" href="#">continue</a>
+            </div>
+        </div>
+    </div>
+</div>

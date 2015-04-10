@@ -1,0 +1,96 @@
+///*------------------------------------*\
+//    #COLORS
+//\*------------------------------------*/
+
+$color-blue: #1B49AF;
+$color-dark-blue: #03386D;
+$color-gray-lightest: #f7f7f8;
+$color-gray-lighter: #e9e9ed;
+$color-gray-light: #d8dae1;
+$color-gray-dark: #383838;
+
+$color-gray-border: #c4c4c4;
+
+
+
+// Page
+$color-background: $color-gray-lightest;
+$color-footer: $color-gray-dark;
+
+
+
+
+// Buttons
+$color-active: $color-blue;
+$color-icon-background: $color-gray-lightest;
+
+
+
+
+
+// Report Grid
+$color-border: $color-gray-light;
+$color-divider: $color-gray-lightest;
+$color-deselected: $color-dark-blue;
+$color-selected: $color-dark-blue;
+
+
+
+
+
+// Report List
+$color-zebra-primary: #f4f4f4;
+$color-zebra-secondary: $color-gray-lighter;
+
+
+
+
+
+// Pagination
+$color-pagination-border: #c4c4c4;
+$color-pagination-background: $color-gray-lighter;
+
+
+
+
+
+//Filters
+$color-filter-text: #959aa8;
+
+
+
+
+
+// Report Categories Colors
+
+    // Analogous
+// $color-category-1: #c2113a;
+// $color-category-2: #8f5da7;
+// $color-category-3: #002a6c;
+// $color-category-4: #1db24a;
+// $color-category-5: #336799;
+// $color-category-6: #646464;
+
+    // Monochromatic
+$color-category-1: #1B49AF;
+$color-category-2: #0677BC;
+$color-category-3: #079987;
+$color-category-4: #036D4F;
+$color-category-5: #A00728;
+$color-category-6: #03386D;
+
+    // Hover States
+// $color-category-1h: #c2113a;
+// $color-category-2h: #8f5da7;
+// $color-category-3h: #002a6c;
+// $color-category-4h: #1db24a;
+// $color-category-5h: #336799;
+// $color-category-6h: #646464;
+
+// Hover States (Mono)
+$color-category-1h: #143682;
+$color-category-2h: #055F96;
+$color-category-3h: #057567;
+$color-category-4h: #024A36;
+$color-category-5h: #78051E;
+$color-category-6h: #02264A;

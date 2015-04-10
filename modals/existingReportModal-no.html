@@ -1,0 +1,58 @@
+<div id="existing-report-no" class="modal fade" tabindex="-1" data-replace="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h3 class="modal-title">Request a Report</h3>
+            </div>
+            <div class="modal-body">
+                <form role="form" id="existing-report-no-form">
+                    <h4>Thank you for contacting the Enterprise Reporting Service</h4>
+                    <br/>
+                    <p><strong>What type of report are you seeking?</strong></p><br/>
+
+                    <div class="dropdown">
+                        <button class="btn btn-success" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span id="selection-selected">Select one of the following</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="javascript:document.getElementById('existing_report_no_picked_report').href='#one-time-ad-hoc'; document.getElementById('for-ers-team-previous').href='#one-time-ad-hoc'; document.getElementById('report-options-seeking').style.display = 'none'; document.getElementById('selection-selected').innerHTML = 'A one-time ad-hoc report or information pull'; document.getElementById('existing-report-no-form').reset(); linkTypeOfReport = 'ad-hoc';">A one-time ad-hoc report or information pull</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="javascript:document.getElementById('existing_report_no_picked_report').href='#report-ongoing'; document.getElementById('for-ers-team-previous').href='#report-ongoing'; document.getElementById('report-options-seeking').style.display = 'none'; document.getElementById('selection-selected').innerHTML = 'A report needed on an on-going basis'; document.getElementById('existing-report-no-form').reset(); linkTypeOfReport = 'report-ongoing';">A report needed on an on-going basis</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="javascript:document.getElementById('existing_report_no_picked_report').href='#report-detailed'; document.getElementById('for-ers-team-previous').href='#report-detailed'; document.getElementById('report-options-seeking').style.display = 'none'; document.getElementById('selection-selected').innerHTML = 'Detailed analysis of a complex business question'; document.getElementById('existing-report-no-form').reset(); linkTypeOfReport = 'report-detailed';">Detailed analysis of a complex business question</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="javascript:document.getElementById('existing_report_no_picked_report').href='#existing-report-yes'; document.getElementById('for-ers-team-previous').href='#existing-report-yes'; document.getElementById('report-options-seeking').style.display = 'block'; document.getElementById('selection-selected').innerHTML = 'I have a question about one of the reports on the Enterprise Reporting Portal'; linkTypeOfReport = '';">I have a question about one of the reports on the Enterprise Reporting Portal</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onclick="javascript:document.getElementById('existing_report_no_picked_report').href='#report-nocategory'; document.getElementById('for-ers-team-previous').href='#report-nocategory'; document.getElementById('report-options-seeking').style.display = 'none'; document.getElementById('selection-selected').innerHTML = 'My request does not fall into any of these categories'; document.getElementById('existing-report-no-form').reset(); linkTypeOfReport = 'no-category';">My request does not fall into any of these categories</a></li>
+                        </ul>
+                    </div>
+                    <br/>
+
+
+                    <div id="report-options-seeking" style="display: none;">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="reportType" id="existing-report-yes1" class="js-pick-report" value="standard" onclick="javascript:document.getElementById('existing_report_no_picked_report').href='#report-standard'; document.getElementById('for-ers-team-previous').href='#report-standard';"> Change the information displayed in an existing report (e.g. add new data fields).
+                            </label>
+                            <label>
+                                <input type="radio" name="reportType" id="existing-report-yes2" class="js-pick-report" value="standard" onclick="javascript:document.getElementById('existing_report_no_picked_report').href='#report-standard2'; document.getElementById('for-ers-team-previous').href='#report-standard2';"> Add graphics or analysis to an existing report (e.g. add a bar chart to an existing pipeline report).
+                            </label>
+                            <label>
+                                <input type="radio" name="reportType" id="existing-report-yes3" class="js-pick-report" value="standard" onclick="javascript:document.getElementById('existing_report_no_picked_report').href='#report-standard3'; document.getElementById('for-ers-team-previous').href='#report-standard3';"> Clarify fields and/or amounts in an existing report.
+                            </label>
+                        </div>
+                    </div>
+
+                    <br/>
+                    Don't know which option to select? <a href="assets/docs/Guidance-for-ERP-Request-a-Report.pdf" target="_blank">Read more</a>.
+                    <br/><br/><br/>
+
+                </form>
+                <p align="center">Page 1 of 3</p>
+            </div>
+
+            <div class="modal-footer part2-foot">
+                <button type="button" data-dismiss="modal" class="btn btn-default">cancel</button>
+                <a class=" btn btn-primary" data-toggle="modal" data-dismiss="modal" href="#" id="existing_report_no_picked_report">continue</a>
+            </div>
+        </div>
+    </div>
+</div>

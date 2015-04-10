@@ -1,0 +1,484 @@
+{
+    "elements": [
+        {
+            "id": "pipeline-most-recently-closed-quarter",
+            "date": "FY'14 Q4",
+            "title": "Pipeline - Most Recently Closed Quarter",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows cumulative obligations, disbursements, accruals, and pipeline (unexpended balance) of both Program and OE funds, excluding trust funds, for the last quarter.",
+            "interval": "Updated Quarterly",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Pipeline%20Report_Most%20Recent%20Quarter.xlsx"
+            },
+            "dashboard": {
+                "type": "PDF",
+                "image": "assets/images/reports/pipeline-recent-quarter.png",
+                "url": "assets/images/reports/pipeline-recent-quarter.pdf"
+            }
+        },
+        {
+            "id": "pipeline-including-subcommitments-subobligations",
+            "date": "FY'14 Q4",
+            "title": "Pipeline - Including Subcommitments & Subobligations",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows cumulative obligations, disbursements, accruals, and pipeline (unexpended balance) of both Program and OE funds for the last quarter.",
+            "interval": "Updated Quarterly",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Pipeline_Subcom_Subobl.xlsx"
+            },
+            "dashboard": {
+                "type": "PDF",
+                "image": "assets/images/reports/pipeline.png",
+                "url": "assets/images/reports/pipeline.pdf"
+            }
+        },
+        {
+            "id": "doing-business-2014",
+            "date": "Jan 2014",
+            "title": "Doing Business 2014",
+            "category": "other",
+            "type": "standard",
+            "description": "This report integrates USAID corporate data with related datasets from the IMF, World Bank, U.S. government agencies and other sources.",
+            "interval": "Static Report",
+            "report": {
+                "type": "PDF",
+                "url": "assets/images/reports/Doing_Business_2014.pdf"
+            }
+        },
+        {
+            "id": "afghanistan-and-pakistan-trends-reports",
+            "date": "Aug 2014",
+            "title": "Afghanistan and Pakistan Trends Reports",
+            "category": "other",
+            "type": "standard",
+            "description": "This report integrates USAID corporate data on Afghanistan and Pakistan with related datasets from the IMF, World Bank, U.S. government agencies and other sources.",
+            "interval": "Static Report",
+            "report": {
+                "type": "PDF",
+                "url": "assets/images/reports/AfPakTRENDS2014.pdf"
+            }
+        },
+        {
+            "id": "middle-east-and-north-africa-trends-report",
+            "date": "Aug 2014",
+            "title": "Middle East and North Africa Trends Report",
+            "category": "other",
+            "type": "standard",
+            "description": "This report integrates USAID corporate data on the Middle East and North Africa with related datasets from the IMF, World Bank, U.S. government agencies and other sources.",
+            "interval": "Static Report",
+            "report": {
+                "type": "PDF",
+                "url": "assets/images/reports/menaTRENDS2014.pdf"
+            }
+        },
+        {
+            "id": "business-forecast",
+            "date": "FY'14 Q4",
+            "title": "Agency Business Forecast",
+            "category": "planning",
+            "type": "standard",
+            "description": "The Agency Business Forecast is posted externally on the USAID website and is critical tool for small businesses, local partners and industry wide usersto prepare for future or current RFP/RFA/RFQ/APS releases.",
+            "interval": "Updated Quarterly",
+            "report": {
+                "type": "XLS",
+                "url": "assets/images/reports/WashingtonBureauBusinessForecast_2014.xlsx"
+            }
+        },
+        {
+            "id": "m-cfo-car-appropriation-status-report",
+            "date": "",
+            "title": "M/CFO/CAR Appropriation Status Report",
+            "category": "other",
+            "type": "standard",
+            "description": "Shows the fund status of current fiscal year appropriations in Phoenix, excluding local currency trust funds.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/CFO_end_of_the_year_reports/CFO_Appropriation_Status_Report.xlsx"
+            }
+        },
+        {
+            "id": "m-cfo-car-funds-control-apportionment-report",
+            "date": "",
+            "title": "M/CFO/CAR Funds Control Apportionment Report",
+            "category": "other",
+            "type": "standard",
+            "description": "Used to reconcile Phoenix budget transactions to the SF-132 Apportionment and Reapportionment Schedule.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/CFO_end_of_the_year_reports/CFO_FC_Apportionment_Report.xlsx"
+            }
+        },
+        {
+            "id": "oe-budget-status",
+            "date": "",
+            "title": "OE Budget Status",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows the budget status for all unexpired funds for administrative funds. It shows budget authority and spending on a cumulative basis, as well as what is currently available for commitment and obligation.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Budget%20Status%20Report_OE.xlsx"
+            }
+        },
+        {
+            "id": "program-budget-status",
+            "date": "10/3/2014",
+            "title": "Program Budget Status",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows the budget status for all unexpired funds for program funds. It shows budget authority and spending on a cumulative basis, as well as what is currently available for commitment and obligation.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Budget%20Status%20Report_Program_Bureau.xlsx"
+            }
+        },
+        {
+            "id": "budget-query-lite-oe-funds",
+            "date": "10/3/2014",
+            "title": "Budget Query Lite - OE Funds",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows budget and spending amounts up and down the budget chain across budgets for current year Administrative funds, excluding trust funds.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Budget_Query_Lite_OE.xlsx"
+            }
+        },
+        {
+            "id": "budget-query-lite-program-funds",
+            "date": "10/3/2014",
+            "title": "Budget Query Lite - Program Funds",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows budget and spending amounts up and down the budget chain across budgets for current year Program funds, excluding trust funds.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Budget_Query_Lite_Program.xlsx"
+            }
+        },
+        {
+            "id": "flash-report-oe-funds",
+            "date": "10/3/2014",
+            "title": "Flash Report - OE Funds",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows current year Budget Authority and Current Year Spending, excluding local currency trust funds, for administrative funds.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Flash_Report_OE_Bureau.xlsx"
+            }
+        },
+        {
+            "id": "flash-report-program-funds",
+            "date": "10/3/2014",
+            "title": "Flash Report - Program Funds",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows current year Budget Authority and Current Year Spending, excluding local currency trust funds, for program funds.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Flash_Report_Program_Bureau.xlsx"
+            }
+        },
+        {
+            "id": "mission-flash-report",
+            "date": "10/3/2014",
+            "title": "Mission Flash Report",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows current year Budget Authority and Current Year Spending, excluding local currency trust funds, for mission program and administrative funds.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Mission_Flash_Report.xlsx"
+            }
+        },
+        {
+            "id": "flash-report-oe-oyb",
+            "date": "10/3/2014",
+            "title": "Flash Report – OE OYB",
+            "category": "budget",
+            "type": "standard",
+            "description": "Show current year Budget Authority and Current Year Spending, excluding local currency trust funds, for OE funds, and with a focus on Operating Year Budget.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/OYB_Flash_Report_OE_Bureau.xlsx"
+            }
+        },
+        {
+            "id": "obligations-by-eocc-oe-and-program",
+            "date": "10/3/2014",
+            "title": "Obligations by EOCC - OE and Program",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows obligations by Expanded Object Class Code (EOCC) at a budget strip level.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Obligations%20by%20EOCC%20OE%20and%20Program.xlsx"
+            }
+        },
+        {
+            "id": "oe-obligations-by-occ-obligation-document-level",
+            "date": "10/3/2014",
+            "title": "OE Obligations by OCC - Obligation Document Level",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows obligation information by Object Class Code (OCC) and it is intended to help Operating Units and Missions prepare and manage their OE budgets.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/OE%20Obligations%20by%20OCC%20Doc%20Level.xlsx"
+            }
+        },
+        {
+            "id": "obligations-by-framework",
+            "date": "10/3/2014",
+            "title": "Obligations by Framework",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows program-funded obligation amounts by Framework Code (Objective, Program Area, and Program Element), excluding trust funds.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Obligations%20by%20Framework%20Structure.xlsx"
+            }
+        },
+        {
+            "id": "open-commitment-status",
+            "date": "10/3/2014",
+            "title": "Open Commitment Status",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows all open commitment amounts (committed but not obligated), including trust funds, by Op Unit and Distribution.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Open%20Commitments.xlsx"
+            }
+        },
+        {
+            "id": "unliquidated-obligations",
+            "date": "10/3/2014",
+            "title": "Unliquidated Obligations",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows the cumulative obligations, disbursements, and unliquidated balance of bothpProgram and Administrative funds, excluding accruals and trust funds.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Unliquidated%20Balance%20Report.xlsx"
+            }
+        },
+        {
+            "id": "unliquidated-obligations-including-subcommitments-subobligations",
+            "date": "10/3/2014",
+            "title": "Unliquidated Obligations - Including Subcommitments & Subobligations",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows the current cumulative obligations, disbursements, and unliquidated balance of both program and administrative funds, excluding accruals.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Unliquidated_Subcom_Subobl.xlsx"
+            }
+        },
+        {
+            "id": "comprehensive-vendor-obligations",
+            "date": "10/3/2014",
+            "title": "Comprehensive Vendor Obligations",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows cumulative obligations broken down by vendor location, vendor category, and the vendor common name.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Vendor_Attribute_Report.xlsx"
+            }
+        },
+        {
+            "id": "comprehensive-vendor-obligations-version-2",
+            "date": "10/3/2014",
+            "title": "Comprehensive Vendor Obligations Version 2",
+            "category": "budget",
+            "type": "standard",
+            "description": "Shows cumulative obligations broken down by vendor location, vendor category, and the vendor common name.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Vendor_Attribute_Report_Version_2.xlsx"
+            }
+        },
+        {
+            "id": "Basic-Education-Pipeline-2007-2013",
+            "date": "Jul 2014",
+            "title": "Base Education Pipeline BBFY 2007 - 2013",
+            "category": "budget",
+            "type": "standard",
+            "description": "This report shows a seven year pipeline analysis for basic education programming conducted for the USAID E3 Bureau.",
+            "interval": "Static Report",
+            "report": {
+                "type": "PDF",
+                "url": "assets/images/reports/Basic-Education-Pipeline-2007-2013.pdf"
+            }
+        },
+        {
+            "id": "Basic-Education-Pipeline-by-Country",
+            "date": "Jul 2014",
+            "title": "Basic Education Pipeline by Country",
+            "category": "budget",
+            "type": "standard",
+            "description": "This report shows a seven year pipeline analysis for basic education programming for 12 missions conducted for the USAID E3 Bureau.",
+            "interval": "Static Report",
+            "report": {
+                "type": "PDF",
+                "url": "assets/images/reports/Basic-Education-Pipeline-by-Country-3-0.pdf"
+            }
+        },
+        {
+            "id": "status-of-open-audit-recommendations",
+            "date": "10/3/2014",
+            "title": "Status of Open Audit Recommendations",
+            "category": "other",
+            "type": "standard",
+            "description": "Shows the status of OIG and GAO open audit recommendations.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Open%20Audit%20Recommendations.xlsx"
+            }
+        },
+        {
+            "id": "internal-control-deficiencies",
+            "date": "10/3/2014",
+            "title": "Internal Control Deficiencies",
+            "category": "other",
+            "type": "standard",
+            "description": "Shows the status of deficiencies identified through audit findings from various sources (e.g., Assessmenta, Management Reviews, Federal Managers Financial Integrity Act.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Compliance.xlsx"
+            }
+        },
+        {
+            "id": "current-fy-recoveries-withdrawn",
+            "date": "10/3/2014",
+            "title": "Current FY Recoveries Withdrawn",
+            "category": "other",
+            "type": "standard",
+            "description": "Shows information on deobligations of prior year obligations that have been withdrawn through the budget hierarchy to the appropriation level.",
+            "interval": "Updated Daily",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Recoveries%20Withdrawn.xlsx"
+            }
+        },
+        {
+            "id": "where-does-usaid-money-go-excel",
+            "date": "FY'14",
+            "title": "Where Does USAID Money Go? – Excel",
+            "category": "vendor",
+            "type": "standard",
+            "description": "A high level summary of the amount of money USAID spends in different countries or regions around the world for the previous fiscal year.",
+            "interval": "Updated Annually",
+            "report": {
+                "type": "XLS",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Where%20does%20USAIDs%20Money%20Go%20with%20filters.xlsx"
+            }
+        },
+        {
+            "id": "where-does-usaid-money-go-pdf",
+            "date": "FY'14",
+            "title": "Where Does USAID Money Go? – PDF",
+            "category": "vendor",
+            "type": "standard",
+            "description": "A high level summary of the amount of money USAID spends in different countries or regions around the world for the previous fiscal year.",
+            "interval": "Updated Annually",
+            "report": {
+                "type": "PDF",
+                "url": "http://phoenixviewer.usaid.gov/PVExecInfo/Where%20does%20USAIDs%20Money%20Go.pdf"
+            }
+        },
+        {
+            "id": "fy-2014-new-obligating-authority-tracking",
+            "date": "FY'14",
+            "title": "FY 2014 New Obligating Authority Tracking",
+            "category": "budget",
+            "type": "standard",
+            "description": "This report compares the Final 653(a) with the most recent changes to the Foreign Assistance budget to allow users to track New Obligating Authorities.",
+            "interval": "Updated Annually",
+            "report": {
+                "type": "XLS",
+                "url": "assets/images/reports/FY 2014 New Obligating Authority Tracking.xls"
+            }
+        },
+        {
+            "id": "cbj-by-framework",
+            "date": "FY'14",
+            "title": "Congressional Budget Justification (CJB) by Framework",
+            "category": "budget",
+            "type": "standard",
+            "description": "This report contains the budget levels that were published in the Congressional Budget Justification (CJB) for fiscal year 2014.",
+            "interval": "Updated Annually",
+            "report": {
+                "type": "XLS",
+                "url": "assets/images/reports/CBJ by Framework.xls"
+            }
+        },
+        {
+            "id": "USAID-F-Standard-Indicators-Malaria-West-Africa-FY-13",
+            "date": "FY'13",
+            "title": "USAID Indicators - Malaria West Africa FY 13",
+            "category": "performance",
+            "type": "standard",
+            "description": "This report shows performance on selected malaria indicators for West Africa (FY 2013). Figures are pulled from the Dollars to Results data set.",
+            "interval": "Static Report",
+            "report": {
+                "type": "PDF",
+                "url": "assets/images/reports/USAID F Standard Indicators - Malaria West Africa FY 13.pdf"
+            }
+        },
+        {
+            "id": "USAID-F-Standard-Indicators-Malaria-West-Africa-FY-13",
+            "date": "FY'13",
+            "title": "USAID Indicators - Malaria West Africa FY 13",
+            "category": "performance",
+            "type": "custom",
+            "description": "This report shows performance on selected malaria indicators for West Africa (FY 2013). Figures are pulled from the Dollars to Results data set.",
+            "interval": "Static Report",
+            "report": {
+                "type": "PDF",
+                "url": "assets/images/reports/USAID F Standard Indicators - Malaria West Africa FY 13.pdf"
+            }
+        },
+        {
+            "id": "fy-2014-new-obligating-authority-tracking",
+            "date": "FY'14",
+            "title": "FY 2014 New Obligating Authority Tracking",
+            "category": "budget",
+            "type": "custom",
+            "description": "This report compares the Final 653(a) with the most recent changes to the Foreign Assistance budget to allow users to track New Obligating Authorities.",
+            "interval": "Updated Annually",
+            "report": {
+                "type": "XLS",
+                "url": "assets/images/reports/FY 2014 New Obligating Authority Tracking.xls"
+            }
+        }
+    ],
+    "results": 32,
+    "date": "2014-10-10T00:00:00.000Z"
+}
