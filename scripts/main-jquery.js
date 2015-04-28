@@ -38,4 +38,6 @@ $(document).ready(function() {
         var videoElement = document.getElementById('faq-video-element');
         videoElement.pause();
     });
+
+    //$('#dropzone_ks').dropzone({url: "Submit.aspx"});
 });

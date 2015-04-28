@@ -21,3 +21,15 @@ app.directive('modalNewReport', function(){
         replace: true
     };
 });
+
+app.directive('uploadForm', function(){
+   return{
+       restrict: 'A',
+       link: function(scope, elem, attrs){
+
+           $('#dropzone_ks').dropzone({url: 'Submit.aspx'});
+
+       }
+
+   };
+});

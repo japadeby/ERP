@@ -6,16 +6,19 @@
     <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/css/dropzone.css">
 </head>
-<body ng-app="ERS">
+<body ng-app="ERS" ng-cloak>
 <div class="application" ng-controller="Reports">
     <section class="application--main">
         <div style="cursor: pointer" reset-filter-banner class="main--header">
             <a class="button--header" id="faq-video-trigger" href="#faq-video" data-toggle="modal">Learn More</a>
-            <a class="button--header" id="gallery" href="#" data-toggle="modal">Gallery</a>
-            <a class="button--header" id="community" href="#" data-toggle="modal">Community</a>
+            <a class="button--header" id="gallery-button" href="#" data-toggle="modal">Community Gallery</a>
         </div>
         <div class="main--title" id="js-report-type-title">
             <span >Find a Report</span>
+            <!--<a id="share-button" class="title-area" href="#">Share Visualizations and Reports</a>-->
+            <!--<span id="community-gallery" class="title-area">Find a Report</span>-->
+            <!--<a id="my-usaid" class="title-area" href="#"><img src="assets/images/erp-MyUsaid-button-wrule.jpg" alt=""/></a>-->
+            <a id="my-usaid" class="title-area" href="#"><img src="assets/images/erp-MyUsaid-button-wrule.jpg" alt=""/></a>
             <!--Search functionality placed in the back pocket-->
             <!--<form class="form-inline search-bar" role="form">-->
                 <!--<div class="form-group has-feedback">-->
@@ -35,7 +38,7 @@
             </div>
             <div ng-show="totalItems > 0" class="main--filter--number js-display-number">
                 <!--<span class="selected-number" ng-bind="numPerPage === filtered.length ? 'All' : numPerPage"></span>Reports being displayed-->
-                <span class="selected-number" ng-bind="all !== false ? getNumPerPage() : 'all'"></span>Reports being displayed
+                <span class="selected-number" ng-bind="all !== true ? getNumPerPage() : 'All'"></span>Reports being displayed
                 <ul  class="number-options js-number-options">
                     <li class="option" ng-click="reportsDisplayed(12)">12</li>
                     <li class="option" ng-click="reportsDisplayed(24)">24</li>

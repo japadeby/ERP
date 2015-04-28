@@ -98,7 +98,7 @@
     font-size: 12px;
     line-height: 35px;
     display: inline-block;
-    width: 87px;
+    width: 140px;
     height: 35px;
     text-align: center;
     color: #fff;
@@ -119,8 +119,8 @@
 }
 
 //Individual header button styles
-#gallery{
-    margin-right: 120px;
+#gallery-button{
+    margin-right: 175px;
 }
 
 
@@ -205,4 +205,10 @@
 
 .modal-footer button:nth-child(1) {
   float: left;
+}
+
+a#my-usaid{
+    position: absolute;
+    left: 800px;
+    width: 140px;
 }
