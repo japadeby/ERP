@@ -23,8 +23,8 @@ module.exports = function(grunt) {
         watch: {
             all: {
                 options: { livereload: true },
-                files: ['scripts/**/*.js', '**/*.html', 'assets/compass/sass/*.scss', '**/*.json'],
-                tasks: ['sass']
+                files: ['scripts/**/*.js', '**/*.html', 'assets/compass/sass/*.scss', '**/*.json']
+                //tasks: ['sass']
             }
         },
         sass: {

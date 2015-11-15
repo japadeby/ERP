@@ -74,9 +74,9 @@
                         <div>{{element.interval}}</div>
                         <div ng-bind="element.interval === 'Updated Daily' ? '' : element.date"></div>
                     </div>
-                    <div class="title" ng-bind="element.title">
+                    <div class="title" ng-bind="element.title" ellipsis-directive>
                     </div>
-                    <div data-ng-bind="element.description" data-ellipsis class="description">
+                    <div data-ng-bind="element.description" class="description">
                         <!--<p class="js-dotdotdot">{{element.description}}</p>-->
                         <!--<div tooltip="{{element.description}}"></div>-->
                     </div>
@@ -153,7 +153,6 @@
 <!--<div ng-include="'modals/videoFaqModal.html'"></div>-->
 <div ng-include="'modals/underReviewModal.html'"></div>
 <div ng-include="'modals/endValidateReportModal.html'"></div>
-
 
 
 <!--JS libraries-->

@@ -30,6 +30,5 @@ app.directive('uploadForm', function(){
            $('#dropzone_ks').dropzone({url: 'Submit.aspx'});
 
        }
-
    };
 });
